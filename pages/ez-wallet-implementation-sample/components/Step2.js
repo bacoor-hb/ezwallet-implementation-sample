@@ -23,13 +23,13 @@ const Step2 = ({
       const params = {
         method: 'POST',
         headers: {
-          Accept: 'application/json',
           'Content-Type': 'application/json',
-          'Cache-Control': 'no-cache',
           'x-api-key': process.env.NEXT_PUBLIC_EZWALLET_API_KEY,
-        }
+        },
+        body: JSON.stringify({ address: ezWalletData.userAddress }),
       }
-      const userEncryptInfo = await fetch(apiGetKeyPath, params)
+      const postResponse = await fetch(apiGetKeyPath, params)
+      const userEncryptInfo = await postResponse.json()
 
       setLoading(false)
       setUserEncryptKey(userEncryptInfo?.data?.encryptKey)
