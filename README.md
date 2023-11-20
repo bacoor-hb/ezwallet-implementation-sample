@@ -32,18 +32,30 @@
       ```
   - **Option 2:** Create a ezwallet json file by yourself at [This page](https://ezwallet.keyring.app/activate/demo)
 &nbsp;
-- **Sample environment using at `Step 2` _(`/env.local`)_**
+- **EZ Wallet API key using at `Step 2`**
   ```bash
-  NEXT_PUBLIC_EZWALLET_API=https://api-airdropband.keyring.app/service/v1
-  NEXT_PUBLIC_EZWALLET_API_KEY=pRPaMF07ERrMXqjBTyglpyMkT5eLKcB3
+  pRPaMF07ERrMXqjBTyglpyMkT5eLKcB3
   ```
 
 ### Running the app in development
 Required [Node.js](https://nodejs.org) **version >= 12.22.0**
 
+- Clone the repo and change the directory
+  ```bash
+  git clone https://github.com/bacoor-hb/ezwallet-implementation-sample.git
+  cd ezwallet-implementation-sample
+  ```
+
+
 - Install npm packages
   ```bash
   yarn
+  ```
+
+- Create your .env.local file on root folder with this content
+  ```bash
+  NEXT_PUBLIC_EZWALLET_API=https://api-airdropband.keyring.app/service/v1
+  NEXT_PUBLIC_EZWALLET_API_KEY=pRPaMF07ERrMXqjBTyglpyMkT5eLKcB3
   ```
 
 - Start app with your custom port
